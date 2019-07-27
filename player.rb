@@ -7,6 +7,10 @@ module Player
     @hand
   end
 
+  def get_revealed_cards
+    @revealed_cards
+  end
+
   def to_s()
     "coins: " + get_coins.to_s + " hand: " + get_hand.join(", ")
   end

@@ -7,6 +7,7 @@ module Bot
   def initialize(coins, hand)
     @coins = coins
     @hand = hand
+    @revealed_cards = []
   end
 
   def get_move(opponent)
@@ -39,6 +40,7 @@ module Bot
 
   def flip_card (deck, card)
     @hand.delete_elements_in [card]
+    @revealed_cards << card
     deck << card
   end
 

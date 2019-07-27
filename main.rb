@@ -27,10 +27,10 @@ while winner == 0
   parse_move player1, player2, "Player 1", "Player 2"
   parse_move player2, player1, "Player 2", "Player 1"
 
-  if player1.get_hand.length == 0
-    winner = 2
-  elsif player2.get_hand.length == 0
+  if player2.get_hand.length == 0
     winner = 1
+  elsif player1.get_hand.length == 0
+    winner = 2
   end
 
   round += 1
